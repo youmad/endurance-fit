@@ -1,0 +1,105 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+use Youmad\Endurance\Fit\Profile\Generation\ProfileGenerationException;
+use Youmad\Endurance\Fit\Profile\Generation\Type\FitTypeProfileGenerator;
+
+$packageRoot = dirname(__DIR__, 3);
+
+spl_autoload_register(
+    static function (string $class) use ($packageRoot): void {
+        $prefix = 'Youmad\\Endurance\\Fit\\';
+
+        if (!str_starts_with($class, $prefix)) {
+            return;
+        }
+
+        $relative = substr($class, strlen($prefix));
+        $path = $packageRoot
+            .'/src/'
+            .str_replace('\\', '/', $relative)
+            .'.php';
+
+        if (is_file($path)) {
+            require $path;
+        }
+    },
+);
+
+$options = getopt(
+    '',
+    [
+        'input:',
+        'output:',
+        'check',
+        'help',
+    ],
+);
+
+if (isset($options['help'])) {
+    fwrite(
+        STDOUT,
+        <<<TEXT
+Usage:
+  fit-generate-types --input=PATH --output=PATH [--check]
+
+Options:
+  --input=PATH   Source Profile.xlsx (required).
+  --output=PATH  Generated PHP data file (required).
+  --check        Fail when the generated output is out of date.
+  --help         Show this help.
+
+TEXT,
+    );
+
+    exit(0);
+}
+
+$input = $options['input'] ?? null;
+$output = $options['output'] ?? null;
+
+if (!is_string($input) || '' === $input || !is_string($output) || '' === $output) {
+    fwrite(STDERR, "Both --input=PATH and --output=PATH are required. See --help.\n");
+    exit(64);
+}
+
+if (!is_file($input) || !is_readable($input)) {
+    fwrite(STDERR, sprintf("FIT profile workbook is not readable: %s. Supply your local Profile.xlsx.\n", $input));
+    exit(66);
+}
+
+$generator = new FitTypeProfileGenerator();
+
+try {
+    $result = isset($options['check'])
+        ? $generator->assertUpToDate(
+            inputPath: $input,
+            outputPath: $output,
+        )
+        : $generator->write(
+            inputPath: $input,
+            outputPath: $output,
+        );
+} catch (ProfileGenerationException $exception) {
+    fwrite(
+        STDERR,
+        $exception->getMessage().PHP_EOL,
+    );
+
+    exit(1);
+}
+
+fwrite(
+    STDOUT,
+    sprintf(
+        "%s %d FIT types and %d symbolic names from %s.\n",
+        isset($options['check'])
+            ? 'Verified'
+            : 'Generated',
+        $result->typeCount,
+        $result->valueNameCount,
+        $input,
+    ),
+);

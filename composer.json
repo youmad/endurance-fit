@@ -1,0 +1,50 @@
+{
+  "name": "youmad/endurance-fit",
+  "description": "Garmin FIT protocol implementation",
+  "type": "library",
+  "license": "MPL-2.0",
+  "require": {
+    "php": "^8.5"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^12.3"
+  },
+  "bin": [
+    "tools/profile-generator/bin/fit-generate-types",
+    "tools/profile-generator/bin/fit-generate-messages"
+  ],
+  "autoload": {
+    "psr-4": {
+      "Youmad\\Endurance\\Fit\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Youmad\\Endurance\\Fit\\Tests\\": "tests/"
+    }
+  },
+  "archive": {
+    "exclude": [
+      "/vendor",
+      "/composer.lock",
+      "/phpunit.xml",
+      "/.phpunit.cache",
+      "/.phpunit.result.cache",
+      "/coverage"
+    ]
+  },
+  "scripts": {
+    "test": "@test:without-profile",
+    "test:without-profile": "@php vendor/bin/phpunit --configuration phpunit.xml.dist",
+    "check": [
+      "@composer validate --strict",
+      "@test"
+    ]
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "phpstan/extension-installer": true
+    }
+  }
+}

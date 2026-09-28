@@ -1,0 +1,84 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+use Youmad\Endurance\Fit\Profile\Generation\Message\FitMessageProfileGenerator;
+use Youmad\Endurance\Fit\Profile\Generation\ProfileGenerationException;
+
+$packageRoot = dirname(__DIR__, 3);
+
+spl_autoload_register(
+    static function (string $class) use ($packageRoot): void {
+        $prefix = 'Youmad\\Endurance\\Fit\\';
+
+        if (!str_starts_with($class, $prefix)) {
+            return;
+        }
+
+        $path = $packageRoot
+            .'/src/'
+            .str_replace('\\', '/', substr($class, strlen($prefix)))
+            .'.php';
+
+        if (is_file($path)) {
+            require $path;
+        }
+    },
+);
+
+$options = getopt('', ['input:', 'output:', 'check', 'help']);
+
+if (isset($options['help'])) {
+    fwrite(
+        STDOUT,
+        <<<TEXT
+Usage:
+  fit-generate-messages --input=PATH --output=PATH [--check]
+
+Options:
+  --input=PATH   Source Profile.xlsx (required).
+  --output=PATH  Generated PHP data file (required).
+  --check        Fail when the generated output is out of date.
+  --help         Show this help.
+
+TEXT,
+    );
+
+    exit(0);
+}
+
+$input = $options['input'] ?? null;
+$output = $options['output'] ?? null;
+
+if (!is_string($input) || '' === $input || !is_string($output) || '' === $output) {
+    fwrite(STDERR, "Both --input=PATH and --output=PATH are required. See --help.\n");
+    exit(64);
+}
+
+if (!is_file($input) || !is_readable($input)) {
+    fwrite(STDERR, sprintf("FIT profile workbook is not readable: %s. Supply your local Profile.xlsx.\n", $input));
+    exit(66);
+}
+
+try {
+    $generator = new FitMessageProfileGenerator();
+    $result = isset($options['check'])
+        ? $generator->assertUpToDate($input, $output)
+        : $generator->write($input, $output);
+
+    fwrite(
+        STDOUT,
+        sprintf(
+            "%s %d FIT messages with %d fields, %d subfields and %d components.\n",
+            isset($options['check']) ? 'Verified' : 'Generated',
+            $result->messageCount,
+            $result->fieldCount,
+            $result->subfieldCount,
+            $result->componentCount,
+        ),
+    );
+} catch (ProfileGenerationException $exception) {
+    fwrite(STDERR, $exception->getMessage()."\n");
+    exit(1);
+}
