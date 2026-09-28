@@ -20,10 +20,10 @@ and GPX export belong to other packages.
 - PHP 8.5 on a 64-bit platform;
 - PHP's Phar support when generating registries from an XLSX workbook.
 
-From the root of a standalone package checkout, install dependencies with:
+Install the package in your application:
 
 ```bash
-composer install
+composer require youmad/endurance-fit
 ```
 
 The decoder has no runtime dependencies on other Composer packages. PHPUnit
@@ -44,24 +44,18 @@ The tested workbook has this SHA-256:
 609b09e3d35028054ff78ecbef8d6f5e267206d8df6842c09511167fc5ce0ad0
 ```
 
-Keep the workbook and generated registries outside the package checkout.
-The examples below use a sibling directory named `fit-profile`: place the
-workbook at `../fit-profile/Profile.xlsx`, then run from the package root:
+Keep the workbook and generated registries in your application, outside
+`vendor/`. The examples below use `var/fit-profile`: create that directory and
+place your separately obtained workbook at `var/fit-profile/Profile.xlsx`.
+Run all commands from the application root.
+
+Check the workbook checksum before generation:
 
 ```bash
-sha256sum ../fit-profile/Profile.xlsx
-
-php tools/profile-generator/bin/fit-generate-types \
-    --input=../fit-profile/Profile.xlsx \
-    --output=../fit-profile/types.php
-php tools/profile-generator/bin/fit-generate-messages \
-    --input=../fit-profile/Profile.xlsx \
-    --output=../fit-profile/messages.php
+sha256sum var/fit-profile/Profile.xlsx
 ```
 
-When installed as a dependency in an application, Composer exposes both
-commands in the application's `vendor/bin` directory (or its configured
-`bin-dir`). From the application root, for example:
+Composer exposes the generators in `vendor/bin` (or your configured `bin-dir`):
 
 ```bash
 vendor/bin/fit-generate-types \
@@ -75,8 +69,7 @@ vendor/bin/fit-generate-messages \
 Here `var/fit-profile` belongs to the consuming application, outside the
 installed package. Obtain the workbook separately and keep it and generated
 registries out of distributed source. Both commands support `--help` and
-`--check`. In a standalone checkout, use the `tools/` paths above: Composer
-does not create `vendor/bin` proxies for the root package's own commands.
+`--check`.
 
 Compare the checksum before generation. Both commands require explicit input
 and output paths. Add `--check` to compare the existing output with freshly
@@ -86,7 +79,7 @@ to be compatible merely because their FIT files use protocol 2.0.
 ## Decode a file
 
 With dependencies installed and registries generated, save this example as a
-PHP script in the package root. Replace `/path/to/activity.fit` with your input:
+PHP script in the application root. Replace `/path/to/activity.fit` with your input:
 
 ```php
 <?php
@@ -100,8 +93,8 @@ use Youmad\Endurance\Fit\IO\ResourceFitInput;
 use Youmad\Endurance\Fit\Profile\Generated\GeneratedFitProfileSet;
 
 $profile = GeneratedFitProfileSet::load(
-    messagesFile: __DIR__ . '/../fit-profile/messages.php',
-    typesFile: __DIR__ . '/../fit-profile/types.php',
+    messagesFile: __DIR__ . '/var/fit-profile/messages.php',
+    typesFile: __DIR__ . '/var/fit-profile/types.php',
 );
 
 $handle = fopen('/path/to/activity.fit', 'rb');
@@ -156,12 +149,26 @@ For custom profiles, construct `FitDecoder` with implementations of
 `Profile\FitProfileRegistry` and `Profile\FitTypeRegistry`. Loading generated
 registries is one configuration option, not a dependency of the raw parser.
 
-## Testing
+## Development
 
-After installing development dependencies in a package checkout, run:
+Install development dependencies and run the package checks:
 
 ```bash
+composer install
 composer check
+```
+
+Composer does not create `vendor/bin` proxies for the root package's own
+commands. To run the generators from this checkout, use their source paths
+and keep Profile data outside the checkout, for example:
+
+```bash
+php tools/profile-generator/bin/fit-generate-types \
+    --input=../fit-profile/Profile.xlsx \
+    --output=../fit-profile/types.php
+php tools/profile-generator/bin/fit-generate-messages \
+    --input=../fit-profile/Profile.xlsx \
+    --output=../fit-profile/messages.php
 ```
 
 `test` runs all package-local tests without external Profile data. `check`
@@ -170,8 +177,8 @@ validates Composer metadata and runs the same tests. The explicit
 
 These commands work without Tracker's private directories. They check parser,
 CRC, value, profile-model, and generator mechanics; they do not establish
-compatibility with a particular Garmin Profile. External-Profile conformance tests and generated-output checks run separately
-in the Tracker monorepository. Those tests and data are not distributed with
+compatibility with a particular Garmin Profile. External-Profile conformance
+tests and generated-output checks run separately in the Tracker monorepository. Those tests and data are not distributed with
 this package.
 
 ## License and external materials
