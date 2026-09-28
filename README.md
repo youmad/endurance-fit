@@ -26,9 +26,7 @@ Install the package in your application:
 composer require youmad/endurance-fit
 ```
 
-The decoder has no runtime dependencies on other Composer packages. PHPUnit
-is installed only for development and tests. No adjacent package checkout is
-required to install or use this package.
+The decoder has no runtime dependencies on other Composer packages.
 
 ## Prepare a Profile
 
@@ -172,8 +170,19 @@ php tools/profile-generator/bin/fit-generate-messages \
 ```
 
 `test` runs all package-local tests without external Profile data. `check`
-validates Composer metadata and runs the same tests. The explicit
-`test:without-profile` command remains available.
+validates Composer metadata, runs the same tests, analyses source code, tests,
+and both CLI generators with PHPStan (level 6), and checks their code style
+with PHP CS Fixer (`@Symfony`). The explicit `test:without-profile` command
+remains available.
+
+Run individual checks or apply code-style fixes with:
+
+```bash
+composer test
+composer analyse
+composer cs:check
+composer cs:fix
+```
 
 These commands work without Tracker's private directories. They check parser,
 CRC, value, profile-model, and generator mechanics; they do not establish
