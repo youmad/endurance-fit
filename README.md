@@ -15,18 +15,14 @@ and GPX export belong to other packages.
 - raw and profile-aware decoding entry points;
 - local generation of PHP registries from a separately supplied workbook.
 
-## Requirements and installation
-
-- PHP 8.5 on a 64-bit platform;
-- PHP's Phar support when generating registries from an XLSX workbook.
-
-Install the package in your application:
+## Installation
 
 ```bash
 composer require youmad/endurance-fit
 ```
 
-The decoder has no runtime dependencies on other Composer packages.
+A 64-bit PHP build is required. Generating registries from an XLSX workbook
+also requires Phar support.
 
 ## Prepare a Profile
 
@@ -148,8 +144,6 @@ For custom profiles, construct `FitDecoder` with implementations of
 registries is one configuration option, not a dependency of the raw parser.
 
 ## Development
-
-Install development dependencies and run the package checks:
 
 ```bash
 composer install
