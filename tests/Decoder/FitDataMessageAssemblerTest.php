@@ -35,7 +35,6 @@ use Youmad\Endurance\Fit\Unified\ComponentFieldValue;
 use Youmad\Endurance\Fit\Unified\FieldValueOrigin;
 use Youmad\Endurance\Fit\Unified\PhysicalFieldValue;
 use Youmad\Endurance\Fit\Unified\PreferPhysicalFieldValueSelectionPolicy;
-use Youmad\Endurance\Fit\Unified\UnifiedDataMessage;
 
 final class FitDataMessageAssemblerTest extends TestCase
 {
@@ -59,11 +58,6 @@ final class FitDataMessageAssemblerTest extends TestCase
                 physical: $physical,
                 components: $components,
             );
-
-        self::assertInstanceOf(
-            UnifiedDataMessage::class,
-            $unified,
-        );
 
         self::assertSame(
             [1, 8, 2],

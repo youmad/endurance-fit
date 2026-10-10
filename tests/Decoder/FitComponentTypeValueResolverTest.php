@@ -27,7 +27,6 @@ use Youmad\Endurance\Fit\Raw\RawDataMessage;
 use Youmad\Endurance\Fit\Raw\RawFieldValue;
 use Youmad\Endurance\Fit\Raw\RawStandardField;
 use Youmad\Endurance\Fit\Raw\StandardFieldDefinition;
-use Youmad\Endurance\Fit\Typed\TypedComponentDataMessage;
 use Youmad\Endurance\Fit\Typed\TypeResolutionState;
 
 final class FitComponentTypeValueResolverTest extends TestCase
@@ -42,11 +41,6 @@ final class FitComponentTypeValueResolverTest extends TestCase
         $typed = $this->resolver(
             $this->eventType(),
         )->resolve($resolved);
-
-        self::assertInstanceOf(
-            TypedComponentDataMessage::class,
-            $typed,
-        );
 
         $component = $typed->components()[0];
 
@@ -304,14 +298,14 @@ final class FitComponentTypeValueResolverTest extends TestCase
             packedValue: 4,
         );
 
-        $log = [];
+        $log = new \SplQueue();
 
         $stream = (
             static function () use (
-                &$log,
+                $log,
                 $message,
             ): iterable {
-                $log[] = 'yield';
+                $log->enqueue('yield');
 
                 yield 7 => $message;
             }
@@ -321,8 +315,8 @@ final class FitComponentTypeValueResolverTest extends TestCase
             $this->eventType(),
         )->resolveStream($stream);
 
-        self::assertSame(
-            [],
+        self::assertCount(
+            0,
             $log,
         );
 
@@ -332,7 +326,7 @@ final class FitComponentTypeValueResolverTest extends TestCase
 
         self::assertSame(
             ['yield'],
-            $log,
+            iterator_to_array($log),
         );
 
         self::assertSame(

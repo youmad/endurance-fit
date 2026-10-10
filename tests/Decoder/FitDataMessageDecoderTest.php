@@ -801,19 +801,19 @@ final class FitDataMessageDecoderTest extends TestCase
             ],
         );
 
-        $log = [];
+        $log = new \SplQueue();
 
         $rawStream = (
             static function () use (
-                &$log,
+                $log,
                 $definitionMessage,
                 $dataMessage,
             ): iterable {
-                $log[] = 'definition';
+                $log->enqueue('definition');
 
                 yield 0 => $definitionMessage;
 
-                $log[] = 'data';
+                $log->enqueue('data');
 
                 yield 1 => $dataMessage;
             }
@@ -823,8 +823,8 @@ final class FitDataMessageDecoderTest extends TestCase
         new FitDataMessageDecoder()
         )->decodeStream($rawStream);
 
-        self::assertSame(
-            [],
+        self::assertCount(
+            0,
             $log,
         );
 
@@ -837,7 +837,7 @@ final class FitDataMessageDecoderTest extends TestCase
                 'definition',
                 'data',
             ],
-            $log,
+            iterator_to_array($log),
         );
 
         self::assertSame(

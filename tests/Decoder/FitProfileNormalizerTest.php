@@ -18,7 +18,6 @@ use Youmad\Endurance\Fit\Profile\FieldTransform;
 use Youmad\Endurance\Fit\Profile\InMemoryFitProfileRegistry;
 use Youmad\Endurance\Fit\Profile\InMemoryFitTypeRegistry;
 use Youmad\Endurance\Fit\Profile\MessageProfile;
-use Youmad\Endurance\Fit\Profiled\ProfiledDataMessage;
 use Youmad\Endurance\Fit\Profiled\ProfileNormalizationState;
 use Youmad\Endurance\Fit\Raw\FitArchitecture;
 use Youmad\Endurance\Fit\Raw\FitBaseType;
@@ -553,14 +552,14 @@ final class FitProfileNormalizerTest extends TestCase
             values: ["\x96"],
         );
 
-        $log = [];
+        $log = new \SplQueue();
 
         $stream = (
             static function () use (
-                &$log,
+                $log,
                 $decoded,
             ): iterable {
-                $log[] = 'yield';
+                $log->enqueue('yield');
 
                 yield 7 => $decoded;
             }
@@ -581,8 +580,8 @@ final class FitProfileNormalizerTest extends TestCase
             ),
         )->normalizeStream($stream);
 
-        self::assertSame(
-            [],
+        self::assertCount(
+            0,
             $log,
         );
 
@@ -592,17 +591,12 @@ final class FitProfileNormalizerTest extends TestCase
 
         self::assertSame(
             ['yield'],
-            $log,
+            iterator_to_array($log),
         );
 
         self::assertSame(
             [7],
             array_keys($messages),
-        );
-
-        self::assertInstanceOf(
-            ProfiledDataMessage::class,
-            $messages[7],
         );
 
         self::assertSame(

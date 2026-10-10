@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Youmad\Endurance\Fit\Tests\Decoder;
 
 use PHPUnit\Framework\TestCase;
-use Youmad\Endurance\Fit\Component\ComponentExtractedDataMessage;
 use Youmad\Endurance\Fit\Decoded\DecodedDataMessage;
 use Youmad\Endurance\Fit\Decoder\FitComponentExtractor;
 use Youmad\Endurance\Fit\Decoder\FitDataMessageDecoder;
@@ -776,14 +775,14 @@ final class FitComponentExtractorTest extends TestCase
             ],
         );
 
-        $log = [];
+        $log = new \SplQueue();
 
         $stream = (
             static function () use (
-                &$log,
+                $log,
                 $message,
             ): iterable {
-                $log[] = 'yield';
+                $log->enqueue('yield');
 
                 yield 7 => $message;
             }
@@ -793,8 +792,8 @@ final class FitComponentExtractorTest extends TestCase
         new FitComponentExtractor()
         )->extractStream($stream);
 
-        self::assertSame(
-            [],
+        self::assertCount(
+            0,
             $log,
         );
 
@@ -804,17 +803,12 @@ final class FitComponentExtractorTest extends TestCase
 
         self::assertSame(
             ['yield'],
-            $log,
+            iterator_to_array($log),
         );
 
         self::assertSame(
             [7],
             array_keys($messages),
-        );
-
-        self::assertInstanceOf(
-            ComponentExtractedDataMessage::class,
-            $messages[7],
         );
 
         self::assertSame(

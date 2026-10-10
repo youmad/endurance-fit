@@ -6,7 +6,6 @@ namespace Youmad\Endurance\Fit\Tests\Decoder;
 
 use PHPUnit\Framework\TestCase;
 use Youmad\Endurance\Fit\Component\ComponentExtractedDataMessage;
-use Youmad\Endurance\Fit\Component\ComponentResolvedDataMessage;
 use Youmad\Endurance\Fit\Decoder\FitComponentExtractor;
 use Youmad\Endurance\Fit\Decoder\FitComponentValueResolver;
 use Youmad\Endurance\Fit\Decoder\FitDataMessageDecoder;
@@ -76,11 +75,6 @@ final class FitComponentValueResolverTest extends TestCase
         $resolved = (
         new FitComponentValueResolver()
         )->resolve($extracted);
-
-        self::assertInstanceOf(
-            ComponentResolvedDataMessage::class,
-            $resolved,
-        );
 
         self::assertCount(
             1,

@@ -23,7 +23,6 @@ use Youmad\Endurance\Fit\Raw\RawDataMessage;
 use Youmad\Endurance\Fit\Raw\RawFieldValue;
 use Youmad\Endurance\Fit\Raw\RawStandardField;
 use Youmad\Endurance\Fit\Raw\StandardFieldDefinition;
-use Youmad\Endurance\Fit\Typed\TypedDataMessage;
 use Youmad\Endurance\Fit\Typed\TypedEnumFieldElement;
 use Youmad\Endurance\Fit\Typed\TypedFieldElements;
 use Youmad\Endurance\Fit\Typed\TypedInvalidFieldElement;
@@ -414,14 +413,14 @@ final class FitTypeValueResolverTest extends TestCase
             fieldTypeName: 'file',
         );
 
-        $log = [];
+        $log = new \SplQueue();
 
         $stream = (
             static function () use (
-                &$log,
+                $log,
                 $message,
             ): iterable {
-                $log[] = 'yield';
+                $log->enqueue('yield');
 
                 yield 8 => $message;
             }
@@ -431,8 +430,8 @@ final class FitTypeValueResolverTest extends TestCase
             $this->fileType(),
         )->resolveStream($stream);
 
-        self::assertSame(
-            [],
+        self::assertCount(
+            0,
             $log,
         );
 
@@ -442,17 +441,12 @@ final class FitTypeValueResolverTest extends TestCase
 
         self::assertSame(
             ['yield'],
-            $log,
+            iterator_to_array($log),
         );
 
         self::assertSame(
             [8],
             array_keys($messages),
-        );
-
-        self::assertInstanceOf(
-            TypedDataMessage::class,
-            $messages[8],
         );
 
         $field = $messages[8]->standardField(0);

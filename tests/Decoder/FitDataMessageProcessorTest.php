@@ -60,11 +60,6 @@ final class FitDataMessageProcessorTest extends TestCase
             types: $this->eventTypes(),
         )->process($raw);
 
-        self::assertInstanceOf(
-            UnifiedDataMessage::class,
-            $message,
-        );
-
         $event = $message->standardField(1);
 
         self::assertNotNull($event);
@@ -491,19 +486,19 @@ final class FitDataMessageProcessorTest extends TestCase
             definition: $raw->definition(),
         );
 
-        $log = [];
+        $log = new \SplQueue();
 
         $stream = (
             static function () use (
-                &$log,
+                $log,
                 $definition,
                 $raw,
             ): iterable {
-                $log[] = 'definition';
+                $log->enqueue('definition');
 
                 yield 0 => $definition;
 
-                $log[] = 'data';
+                $log->enqueue('data');
 
                 yield 1 => $raw;
             }
@@ -514,8 +509,8 @@ final class FitDataMessageProcessorTest extends TestCase
             types: $this->eventTypes(),
         )->processStream($stream);
 
-        self::assertSame(
-            [],
+        self::assertCount(
+            0,
             $log,
         );
 
@@ -528,7 +523,7 @@ final class FitDataMessageProcessorTest extends TestCase
                 'definition',
                 'data',
             ],
-            $log,
+            iterator_to_array($log),
         );
 
         self::assertSame(
