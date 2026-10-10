@@ -178,11 +178,9 @@ composer cs:check
 composer cs:fix
 ```
 
-These commands work without Tracker's private directories. They check parser,
-CRC, value, profile-model, and generator mechanics; they do not establish
-compatibility with a particular Garmin Profile. External-Profile conformance
-tests and generated-output checks run separately in the Tracker monorepository. Those tests and data are not distributed with
-this package.
+Package-local tests cover parsing, CRCs, field values, profile models and
+generators without external Profile data. Validate a separately supplied
+workbook and its generated registries before using them in your application.
 
 ## License and external materials
 
