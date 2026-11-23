@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Tests\Decoder;
+namespace Endurance\Fit\Tests\Decoder;
 
+use Endurance\Fit\Decoded\DecodedFieldElements;
+use Endurance\Fit\Decoded\InvalidFieldElement;
+use Endurance\Fit\Decoded\UndecodableFieldValue;
+use Endurance\Fit\Decoded\ValidFieldElement;
+use Endurance\Fit\Decoder\FitBaseTypeDecoder;
+use Endurance\Fit\Raw\FitArchitecture;
+use Endurance\Fit\Raw\FitBaseType;
+use Endurance\Fit\Raw\FitBaseTypeKind;
+use Endurance\Fit\Raw\RawFieldValue;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
-use Youmad\Endurance\Fit\Decoded\DecodedFieldElements;
-use Youmad\Endurance\Fit\Decoded\InvalidFieldElement;
-use Youmad\Endurance\Fit\Decoded\UndecodableFieldValue;
-use Youmad\Endurance\Fit\Decoded\ValidFieldElement;
-use Youmad\Endurance\Fit\Decoder\FitBaseTypeDecoder;
-use Youmad\Endurance\Fit\Raw\FitArchitecture;
-use Youmad\Endurance\Fit\Raw\FitBaseType;
-use Youmad\Endurance\Fit\Raw\FitBaseTypeKind;
-use Youmad\Endurance\Fit\Raw\RawFieldValue;
 
 final class FitBaseTypeDecoderTest extends TestCase
 {

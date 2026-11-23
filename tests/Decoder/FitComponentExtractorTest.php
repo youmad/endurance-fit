@@ -2,29 +2,29 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Tests\Decoder;
+namespace Endurance\Fit\Tests\Decoder;
 
+use Endurance\Fit\Decoded\DecodedDataMessage;
+use Endurance\Fit\Decoder\FitComponentExtractor;
+use Endurance\Fit\Decoder\FitDataMessageDecoder;
+use Endurance\Fit\Decoder\FitProfileNormalizer;
+use Endurance\Fit\Exception\InvalidFitProfile;
+use Endurance\Fit\Profile\ComponentProfile;
+use Endurance\Fit\Profile\FieldProfile;
+use Endurance\Fit\Profile\FieldTransform;
+use Endurance\Fit\Profile\InMemoryFitProfileRegistry;
+use Endurance\Fit\Profile\MessageProfile;
+use Endurance\Fit\Profile\SubfieldCondition;
+use Endurance\Fit\Profile\SubfieldProfile;
+use Endurance\Fit\Profiled\ProfiledDataMessage;
+use Endurance\Fit\Raw\FitArchitecture;
+use Endurance\Fit\Raw\FitBaseType;
+use Endurance\Fit\Raw\MessageDefinition;
+use Endurance\Fit\Raw\RawDataMessage;
+use Endurance\Fit\Raw\RawFieldValue;
+use Endurance\Fit\Raw\RawStandardField;
+use Endurance\Fit\Raw\StandardFieldDefinition;
 use PHPUnit\Framework\TestCase;
-use Youmad\Endurance\Fit\Decoded\DecodedDataMessage;
-use Youmad\Endurance\Fit\Decoder\FitComponentExtractor;
-use Youmad\Endurance\Fit\Decoder\FitDataMessageDecoder;
-use Youmad\Endurance\Fit\Decoder\FitProfileNormalizer;
-use Youmad\Endurance\Fit\Exception\InvalidFitProfile;
-use Youmad\Endurance\Fit\Profile\ComponentProfile;
-use Youmad\Endurance\Fit\Profile\FieldProfile;
-use Youmad\Endurance\Fit\Profile\FieldTransform;
-use Youmad\Endurance\Fit\Profile\InMemoryFitProfileRegistry;
-use Youmad\Endurance\Fit\Profile\MessageProfile;
-use Youmad\Endurance\Fit\Profile\SubfieldCondition;
-use Youmad\Endurance\Fit\Profile\SubfieldProfile;
-use Youmad\Endurance\Fit\Profiled\ProfiledDataMessage;
-use Youmad\Endurance\Fit\Raw\FitArchitecture;
-use Youmad\Endurance\Fit\Raw\FitBaseType;
-use Youmad\Endurance\Fit\Raw\MessageDefinition;
-use Youmad\Endurance\Fit\Raw\RawDataMessage;
-use Youmad\Endurance\Fit\Raw\RawFieldValue;
-use Youmad\Endurance\Fit\Raw\RawStandardField;
-use Youmad\Endurance\Fit\Raw\StandardFieldDefinition;
 
 final class FitComponentExtractorTest extends TestCase
 {

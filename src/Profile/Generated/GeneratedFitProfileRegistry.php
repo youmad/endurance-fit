@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Profile\Generated;
+namespace Endurance\Fit\Profile\Generated;
 
-use Youmad\Endurance\Fit\Exception\InvalidFitProfile;
-use Youmad\Endurance\Fit\Profile\ComponentProfile;
-use Youmad\Endurance\Fit\Profile\FieldProfile;
-use Youmad\Endurance\Fit\Profile\FieldTransform;
-use Youmad\Endurance\Fit\Profile\FitProfileRegistry;
-use Youmad\Endurance\Fit\Profile\MessageProfile;
-use Youmad\Endurance\Fit\Profile\SubfieldCondition;
-use Youmad\Endurance\Fit\Profile\SubfieldProfile;
+use Endurance\Fit\Exception\InvalidFitProfile;
+use Endurance\Fit\Profile\ComponentProfile;
+use Endurance\Fit\Profile\FieldProfile;
+use Endurance\Fit\Profile\FieldTransform;
+use Endurance\Fit\Profile\FitProfileRegistry;
+use Endurance\Fit\Profile\MessageProfile;
+use Endurance\Fit\Profile\SubfieldCondition;
+use Endurance\Fit\Profile\SubfieldProfile;
 
 final readonly class GeneratedFitProfileRegistry implements FitProfileRegistry
 {

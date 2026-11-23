@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Decoder;
+namespace Endurance\Fit\Decoder;
 
-use Youmad\Endurance\Fit\Exception\FitDecodeException;
-use Youmad\Endurance\Fit\Raw\FitFileHeader;
-use Youmad\Endurance\Fit\Raw\FitFileTrailer;
-use Youmad\Endurance\Fit\Unified\UnifiedDataMessage;
+use Endurance\Fit\Exception\FitDecodeException;
+use Endurance\Fit\Raw\FitFileHeader;
+use Endurance\Fit\Raw\FitFileTrailer;
+use Endurance\Fit\Unified\UnifiedDataMessage;
 
 final class UnifiedFitFileStream
 {

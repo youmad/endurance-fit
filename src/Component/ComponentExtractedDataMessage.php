@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Component;
+namespace Endurance\Fit\Component;
 
-use Youmad\Endurance\Fit\Profiled\ProfiledDataMessage;
+use Endurance\Fit\Profiled\ProfiledDataMessage;
 
 final readonly class ComponentExtractedDataMessage
 {

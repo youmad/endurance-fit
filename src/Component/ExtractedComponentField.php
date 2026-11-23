@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Component;
+namespace Endurance\Fit\Component;
 
-use Youmad\Endurance\Fit\Profile\ComponentProfile;
-use Youmad\Endurance\Fit\Profile\FieldProfile;
-use Youmad\Endurance\Fit\Profile\SubfieldProfile;
-use Youmad\Endurance\Fit\Profiled\ProfiledStandardField;
+use Endurance\Fit\Profile\ComponentProfile;
+use Endurance\Fit\Profile\FieldProfile;
+use Endurance\Fit\Profile\SubfieldProfile;
+use Endurance\Fit\Profiled\ProfiledStandardField;
 
 final readonly class ExtractedComponentField
 {

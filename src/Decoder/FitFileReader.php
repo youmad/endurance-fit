@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Decoder;
+namespace Endurance\Fit\Decoder;
 
-use Youmad\Endurance\Fit\Checksum\FitCrc16;
-use Youmad\Endurance\Fit\Exception\InvalidFitFile;
-use Youmad\Endurance\Fit\IO\BufferedFitInput;
-use Youmad\Endurance\Fit\IO\CrcTrackingFitInput;
-use Youmad\Endurance\Fit\IO\FitInput;
-use Youmad\Endurance\Fit\Raw\FitFileHeader;
+use Endurance\Fit\Checksum\FitCrc16;
+use Endurance\Fit\Exception\InvalidFitFile;
+use Endurance\Fit\IO\BufferedFitInput;
+use Endurance\Fit\IO\CrcTrackingFitInput;
+use Endurance\Fit\IO\FitInput;
+use Endurance\Fit\Raw\FitFileHeader;
 
 final readonly class FitFileReader
 {

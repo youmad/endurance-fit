@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Decoder;
+namespace Endurance\Fit\Decoder;
 
-use Youmad\Endurance\Fit\Decoded\DecodedDataMessage;
-use Youmad\Endurance\Fit\Decoded\DecodedFieldElements;
-use Youmad\Endurance\Fit\Decoded\DecodedStandardField;
-use Youmad\Endurance\Fit\Decoded\ValidFieldElement;
-use Youmad\Endurance\Fit\Profile\FieldProfile;
-use Youmad\Endurance\Fit\Profile\SubfieldProfile;
+use Endurance\Fit\Decoded\DecodedDataMessage;
+use Endurance\Fit\Decoded\DecodedFieldElements;
+use Endurance\Fit\Decoded\DecodedStandardField;
+use Endurance\Fit\Decoded\ValidFieldElement;
+use Endurance\Fit\Profile\FieldProfile;
+use Endurance\Fit\Profile\SubfieldProfile;
 
 final readonly class FitSubfieldSelector
 {

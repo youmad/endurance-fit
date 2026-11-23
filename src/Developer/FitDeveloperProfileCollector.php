@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Developer;
+namespace Endurance\Fit\Developer;
 
-use Youmad\Endurance\Fit\Exception\FitDecodeException;
-use Youmad\Endurance\Fit\Profile\FieldTransform;
-use Youmad\Endurance\Fit\Profile\FitProfileRegistry;
-use Youmad\Endurance\Fit\Raw\FitBaseType;
-use Youmad\Endurance\Fit\Typed\TypedDataMessage;
-use Youmad\Endurance\Fit\Typed\TypedEnumFieldElement;
-use Youmad\Endurance\Fit\Typed\TypedFieldElements;
-use Youmad\Endurance\Fit\Typed\TypedInvalidFieldElement;
-use Youmad\Endurance\Fit\Typed\TypedScalarFieldElement;
+use Endurance\Fit\Exception\FitDecodeException;
+use Endurance\Fit\Profile\FieldTransform;
+use Endurance\Fit\Profile\FitProfileRegistry;
+use Endurance\Fit\Raw\FitBaseType;
+use Endurance\Fit\Typed\TypedDataMessage;
+use Endurance\Fit\Typed\TypedEnumFieldElement;
+use Endurance\Fit\Typed\TypedFieldElements;
+use Endurance\Fit\Typed\TypedInvalidFieldElement;
+use Endurance\Fit\Typed\TypedScalarFieldElement;
 
 final readonly class FitDeveloperProfileCollector
 {

@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Tests\Decoder;
+namespace Endurance\Fit\Tests\Decoder;
 
+use Endurance\Fit\Decoder\FitDecoder;
+use Endurance\Fit\Exception\FitDecodeException;
+use Endurance\Fit\IO\ResourceFitInput;
+use Endurance\Fit\Profile\FieldProfile;
+use Endurance\Fit\Profile\InMemoryFitProfileRegistry;
+use Endurance\Fit\Profile\InMemoryFitTypeRegistry;
+use Endurance\Fit\Profile\MessageProfile;
+use Endurance\Fit\Typed\TypedFieldElements;
+use Endurance\Fit\Typed\TypedScalarFieldElement;
+use Endurance\Fit\Unified\UnifiedDataMessage;
 use PHPUnit\Framework\TestCase;
-use Youmad\Endurance\Fit\Decoder\FitDecoder;
-use Youmad\Endurance\Fit\Exception\FitDecodeException;
-use Youmad\Endurance\Fit\IO\ResourceFitInput;
-use Youmad\Endurance\Fit\Profile\FieldProfile;
-use Youmad\Endurance\Fit\Profile\InMemoryFitProfileRegistry;
-use Youmad\Endurance\Fit\Profile\InMemoryFitTypeRegistry;
-use Youmad\Endurance\Fit\Profile\MessageProfile;
-use Youmad\Endurance\Fit\Typed\TypedFieldElements;
-use Youmad\Endurance\Fit\Typed\TypedScalarFieldElement;
-use Youmad\Endurance\Fit\Unified\UnifiedDataMessage;
 
 final class FitDecoderTest extends TestCase
 {

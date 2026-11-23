@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Exception;
+namespace Endurance\Fit\Exception;
 
 class FitDecodeException extends \RuntimeException
 {

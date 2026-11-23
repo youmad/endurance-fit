@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Decoder;
+namespace Endurance\Fit\Decoder;
 
-use Youmad\Endurance\Fit\Decoded\DecodedFieldElements;
-use Youmad\Endurance\Fit\Decoded\DecodedFieldValue;
-use Youmad\Endurance\Fit\Decoded\InvalidFieldElement;
-use Youmad\Endurance\Fit\Decoded\ValidFieldElement;
-use Youmad\Endurance\Fit\Profile\FieldTransform;
+use Endurance\Fit\Decoded\DecodedFieldElements;
+use Endurance\Fit\Decoded\DecodedFieldValue;
+use Endurance\Fit\Decoded\InvalidFieldElement;
+use Endurance\Fit\Decoded\ValidFieldElement;
+use Endurance\Fit\Profile\FieldTransform;
 
 final readonly class FitFieldValueTransformer
 {

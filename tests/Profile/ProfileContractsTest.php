@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Tests\Profile;
+namespace Endurance\Fit\Tests\Profile;
 
+use Endurance\Fit\Exception\InvalidFitProfile;
+use Endurance\Fit\Profile\FieldProfile;
+use Endurance\Fit\Profile\FieldTransform;
+use Endurance\Fit\Profile\InMemoryFitProfileRegistry;
+use Endurance\Fit\Profile\MessageProfile;
 use PHPUnit\Framework\TestCase;
-use Youmad\Endurance\Fit\Exception\InvalidFitProfile;
-use Youmad\Endurance\Fit\Profile\FieldProfile;
-use Youmad\Endurance\Fit\Profile\FieldTransform;
-use Youmad\Endurance\Fit\Profile\InMemoryFitProfileRegistry;
-use Youmad\Endurance\Fit\Profile\MessageProfile;
 
 final class ProfileContractsTest extends TestCase
 {

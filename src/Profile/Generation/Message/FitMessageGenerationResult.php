@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Profile\Generation\Message;
+namespace Endurance\Fit\Profile\Generation\Message;
 
 final readonly class FitMessageGenerationResult
 {

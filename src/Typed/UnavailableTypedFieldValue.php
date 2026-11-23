@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Typed;
+namespace Endurance\Fit\Typed;
 
-use Youmad\Endurance\Fit\Decoded\DecodedFieldValue;
+use Endurance\Fit\Decoded\DecodedFieldValue;
 
 final readonly class UnavailableTypedFieldValue implements TypedFieldValue
 {

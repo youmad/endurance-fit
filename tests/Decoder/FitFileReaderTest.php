@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Tests\Decoder;
+namespace Endurance\Fit\Tests\Decoder;
 
+use Endurance\Fit\Decoder\FitFileReader;
+use Endurance\Fit\Exception\FitDecodeException;
+use Endurance\Fit\Exception\InvalidFitFile;
+use Endurance\Fit\IO\ResourceFitInput;
+use Endurance\Fit\Raw\RawDataMessage;
+use Endurance\Fit\Raw\RawDefinitionMessage;
 use PHPUnit\Framework\TestCase;
-use Youmad\Endurance\Fit\Decoder\FitFileReader;
-use Youmad\Endurance\Fit\Exception\FitDecodeException;
-use Youmad\Endurance\Fit\Exception\InvalidFitFile;
-use Youmad\Endurance\Fit\IO\ResourceFitInput;
-use Youmad\Endurance\Fit\Raw\RawDataMessage;
-use Youmad\Endurance\Fit\Raw\RawDefinitionMessage;
 
 final class FitFileReaderTest extends TestCase
 {

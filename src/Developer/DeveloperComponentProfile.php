@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Developer;
+namespace Endurance\Fit\Developer;
 
-use Youmad\Endurance\Fit\Exception\InvalidFitProfile;
+use Endurance\Fit\Exception\InvalidFitProfile;
 
 final readonly class DeveloperComponentProfile
 {

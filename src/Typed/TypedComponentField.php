@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Typed;
+namespace Endurance\Fit\Typed;
 
-use Youmad\Endurance\Fit\Component\ResolvedComponentField;
-use Youmad\Endurance\Fit\Profile\FitTypeProfile;
-use Youmad\Endurance\Fit\Profile\TypeValueProfile;
+use Endurance\Fit\Component\ResolvedComponentField;
+use Endurance\Fit\Profile\FitTypeProfile;
+use Endurance\Fit\Profile\TypeValueProfile;
 
 final readonly class TypedComponentField
 {

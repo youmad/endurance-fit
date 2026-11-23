@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Profile\Generated;
+namespace Endurance\Fit\Profile\Generated;
 
-use Youmad\Endurance\Fit\Exception\InvalidFitProfile;
-use Youmad\Endurance\Fit\Profile\FitTypeProfile;
-use Youmad\Endurance\Fit\Profile\FitTypeRegistry;
-use Youmad\Endurance\Fit\Profile\TypeValueProfile;
+use Endurance\Fit\Exception\InvalidFitProfile;
+use Endurance\Fit\Profile\FitTypeProfile;
+use Endurance\Fit\Profile\FitTypeRegistry;
+use Endurance\Fit\Profile\TypeValueProfile;
 
 final readonly class GeneratedFitTypeRegistry implements FitTypeRegistry
 {

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Typed;
+namespace Endurance\Fit\Typed;
 
-use Youmad\Endurance\Fit\Component\ComponentResolvedDataMessage;
-use Youmad\Endurance\Fit\Profiled\ProfiledDataMessage;
+use Endurance\Fit\Component\ComponentResolvedDataMessage;
+use Endurance\Fit\Profiled\ProfiledDataMessage;
 
 final readonly class TypedComponentDataMessage
 {

@@ -2,22 +2,22 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Decoder;
+namespace Endurance\Fit\Decoder;
 
-use Youmad\Endurance\Fit\Exception\FitDecodeException;
-use Youmad\Endurance\Fit\IO\FitInput;
-use Youmad\Endurance\Fit\Raw\DeveloperFieldDefinition;
-use Youmad\Endurance\Fit\Raw\FitArchitecture;
-use Youmad\Endurance\Fit\Raw\FitBaseType;
-use Youmad\Endurance\Fit\Raw\MessageDefinition;
-use Youmad\Endurance\Fit\Raw\RawCompressedTimestampDataMessage;
-use Youmad\Endurance\Fit\Raw\RawDataMessage;
-use Youmad\Endurance\Fit\Raw\RawDefinitionMessage;
-use Youmad\Endurance\Fit\Raw\RawDeveloperField;
-use Youmad\Endurance\Fit\Raw\RawFieldValue;
-use Youmad\Endurance\Fit\Raw\RawFitMessage;
-use Youmad\Endurance\Fit\Raw\RawStandardField;
-use Youmad\Endurance\Fit\Raw\StandardFieldDefinition;
+use Endurance\Fit\Exception\FitDecodeException;
+use Endurance\Fit\IO\FitInput;
+use Endurance\Fit\Raw\DeveloperFieldDefinition;
+use Endurance\Fit\Raw\FitArchitecture;
+use Endurance\Fit\Raw\FitBaseType;
+use Endurance\Fit\Raw\MessageDefinition;
+use Endurance\Fit\Raw\RawCompressedTimestampDataMessage;
+use Endurance\Fit\Raw\RawDataMessage;
+use Endurance\Fit\Raw\RawDefinitionMessage;
+use Endurance\Fit\Raw\RawDeveloperField;
+use Endurance\Fit\Raw\RawFieldValue;
+use Endurance\Fit\Raw\RawFitMessage;
+use Endurance\Fit\Raw\RawStandardField;
+use Endurance\Fit\Raw\StandardFieldDefinition;
 
 final readonly class RawRecordStreamReader
 {

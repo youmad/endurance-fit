@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Tests\Developer;
+namespace Endurance\Fit\Tests\Developer;
 
+use Endurance\Fit\Developer\DeveloperDataProfile;
+use Endurance\Fit\Developer\DeveloperFieldProfile;
+use Endurance\Fit\Developer\FitDeveloperProfileRegistry;
+use Endurance\Fit\Raw\FitBaseType;
 use PHPUnit\Framework\TestCase;
-use Youmad\Endurance\Fit\Developer\DeveloperDataProfile;
-use Youmad\Endurance\Fit\Developer\DeveloperFieldProfile;
-use Youmad\Endurance\Fit\Developer\FitDeveloperProfileRegistry;
-use Youmad\Endurance\Fit\Raw\FitBaseType;
 
 final class FitDeveloperProfileRegistryTest extends TestCase
 {

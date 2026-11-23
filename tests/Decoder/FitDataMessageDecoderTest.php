@@ -2,25 +2,25 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Tests\Decoder;
+namespace Endurance\Fit\Tests\Decoder;
 
+use Endurance\Fit\Decoded\DecodedFieldElements;
+use Endurance\Fit\Decoded\DecodedFieldOrigin;
+use Endurance\Fit\Decoded\InvalidFieldElement;
+use Endurance\Fit\Decoded\ValidFieldElement;
+use Endurance\Fit\Decoder\FitDataMessageDecoder;
+use Endurance\Fit\Raw\DeveloperFieldDefinition;
+use Endurance\Fit\Raw\FitArchitecture;
+use Endurance\Fit\Raw\FitBaseType;
+use Endurance\Fit\Raw\MessageDefinition;
+use Endurance\Fit\Raw\RawCompressedTimestampDataMessage;
+use Endurance\Fit\Raw\RawDataMessage;
+use Endurance\Fit\Raw\RawDefinitionMessage;
+use Endurance\Fit\Raw\RawDeveloperField;
+use Endurance\Fit\Raw\RawFieldValue;
+use Endurance\Fit\Raw\RawStandardField;
+use Endurance\Fit\Raw\StandardFieldDefinition;
 use PHPUnit\Framework\TestCase;
-use Youmad\Endurance\Fit\Decoded\DecodedFieldElements;
-use Youmad\Endurance\Fit\Decoded\DecodedFieldOrigin;
-use Youmad\Endurance\Fit\Decoded\InvalidFieldElement;
-use Youmad\Endurance\Fit\Decoded\ValidFieldElement;
-use Youmad\Endurance\Fit\Decoder\FitDataMessageDecoder;
-use Youmad\Endurance\Fit\Raw\DeveloperFieldDefinition;
-use Youmad\Endurance\Fit\Raw\FitArchitecture;
-use Youmad\Endurance\Fit\Raw\FitBaseType;
-use Youmad\Endurance\Fit\Raw\MessageDefinition;
-use Youmad\Endurance\Fit\Raw\RawCompressedTimestampDataMessage;
-use Youmad\Endurance\Fit\Raw\RawDataMessage;
-use Youmad\Endurance\Fit\Raw\RawDefinitionMessage;
-use Youmad\Endurance\Fit\Raw\RawDeveloperField;
-use Youmad\Endurance\Fit\Raw\RawFieldValue;
-use Youmad\Endurance\Fit\Raw\RawStandardField;
-use Youmad\Endurance\Fit\Raw\StandardFieldDefinition;
 
 final class FitDataMessageDecoderTest extends TestCase
 {

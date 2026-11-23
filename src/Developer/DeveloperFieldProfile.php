@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Developer;
+namespace Endurance\Fit\Developer;
 
-use Youmad\Endurance\Fit\Exception\InvalidFitProfile;
-use Youmad\Endurance\Fit\Profile\FieldProfile;
-use Youmad\Endurance\Fit\Profile\FieldTransform;
-use Youmad\Endurance\Fit\Raw\FitBaseType;
-use Youmad\Endurance\Fit\Raw\FitBaseTypeKind;
+use Endurance\Fit\Exception\InvalidFitProfile;
+use Endurance\Fit\Profile\FieldProfile;
+use Endurance\Fit\Profile\FieldTransform;
+use Endurance\Fit\Raw\FitBaseType;
+use Endurance\Fit\Raw\FitBaseTypeKind;
 
 final readonly class DeveloperFieldProfile
 {

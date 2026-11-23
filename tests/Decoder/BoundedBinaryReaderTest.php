@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Tests\Decoder;
+namespace Endurance\Fit\Tests\Decoder;
 
+use Endurance\Fit\Decoder\BinaryReader;
+use Endurance\Fit\Decoder\BoundedBinaryReader;
+use Endurance\Fit\Exception\FitDecodeException;
+use Endurance\Fit\IO\ResourceFitInput;
+use Endurance\Fit\Raw\FitArchitecture;
 use PHPUnit\Framework\TestCase;
-use Youmad\Endurance\Fit\Decoder\BinaryReader;
-use Youmad\Endurance\Fit\Decoder\BoundedBinaryReader;
-use Youmad\Endurance\Fit\Exception\FitDecodeException;
-use Youmad\Endurance\Fit\IO\ResourceFitInput;
-use Youmad\Endurance\Fit\Raw\FitArchitecture;
 
 final class BoundedBinaryReaderTest extends TestCase
 {

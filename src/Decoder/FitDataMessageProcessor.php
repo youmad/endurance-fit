@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Decoder;
+namespace Endurance\Fit\Decoder;
 
-use Youmad\Endurance\Fit\Decoded\DecodedDataMessage;
-use Youmad\Endurance\Fit\Raw\RawDataRecord;
-use Youmad\Endurance\Fit\Raw\RawFitMessage;
-use Youmad\Endurance\Fit\Typed\TypedDataMessage;
-use Youmad\Endurance\Fit\Unified\UnifiedDataMessage;
-use Youmad\Endurance\Fit\Unified\UnifiedDeveloperField;
+use Endurance\Fit\Decoded\DecodedDataMessage;
+use Endurance\Fit\Raw\RawDataRecord;
+use Endurance\Fit\Raw\RawFitMessage;
+use Endurance\Fit\Typed\TypedDataMessage;
+use Endurance\Fit\Unified\UnifiedDataMessage;
+use Endurance\Fit\Unified\UnifiedDeveloperField;
 
 final class FitDataMessageProcessor
 {

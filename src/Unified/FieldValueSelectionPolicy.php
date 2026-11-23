@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Unified;
+namespace Endurance\Fit\Unified;
 
 interface FieldValueSelectionPolicy
 {

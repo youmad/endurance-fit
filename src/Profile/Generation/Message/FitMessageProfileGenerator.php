@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Profile\Generation\Message;
+namespace Endurance\Fit\Profile\Generation\Message;
 
-use Youmad\Endurance\Fit\Profile\Generation\ProfileGenerationException;
-use Youmad\Endurance\Fit\Profile\Generation\Type\TypesSheetParser;
-use Youmad\Endurance\Fit\Profile\Generation\Xlsx\XlsxWorkbookReader;
+use Endurance\Fit\Profile\Generation\ProfileGenerationException;
+use Endurance\Fit\Profile\Generation\Type\TypesSheetParser;
+use Endurance\Fit\Profile\Generation\Xlsx\XlsxWorkbookReader;
 
 final readonly class FitMessageProfileGenerator
 {

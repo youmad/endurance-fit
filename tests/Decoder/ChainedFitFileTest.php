@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Tests\Decoder;
+namespace Endurance\Fit\Tests\Decoder;
 
+use Endurance\Fit\Checksum\FitCrc16;
+use Endurance\Fit\Decoder\FitFileReader;
+use Endurance\Fit\Exception\FitDecodeException;
+use Endurance\Fit\IO\ResourceFitInput;
+use Endurance\Fit\Raw\RawCompressedTimestampDataMessage;
+use Endurance\Fit\Raw\RawDataMessage;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
-use Youmad\Endurance\Fit\Checksum\FitCrc16;
-use Youmad\Endurance\Fit\Decoder\FitFileReader;
-use Youmad\Endurance\Fit\Exception\FitDecodeException;
-use Youmad\Endurance\Fit\IO\ResourceFitInput;
-use Youmad\Endurance\Fit\Raw\RawCompressedTimestampDataMessage;
-use Youmad\Endurance\Fit\Raw\RawDataMessage;
 
 final class ChainedFitFileTest extends TestCase
 {

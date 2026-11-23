@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Raw;
+namespace Endurance\Fit\Raw;
 
-use Youmad\Endurance\Fit\Exception\InvalidFitFile;
+use Endurance\Fit\Exception\InvalidFitFile;
 
 final readonly class FitFileHeader
 {

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Profiled;
+namespace Endurance\Fit\Profiled;
 
-use Youmad\Endurance\Fit\Decoded\DecodedDataMessage;
-use Youmad\Endurance\Fit\Profile\MessageProfile;
-use Youmad\Endurance\Fit\Raw\FitArchitecture;
-use Youmad\Endurance\Fit\Raw\RawDeveloperField;
+use Endurance\Fit\Decoded\DecodedDataMessage;
+use Endurance\Fit\Profile\MessageProfile;
+use Endurance\Fit\Raw\FitArchitecture;
+use Endurance\Fit\Raw\RawDeveloperField;
 
 final readonly class ProfiledDataMessage
 {

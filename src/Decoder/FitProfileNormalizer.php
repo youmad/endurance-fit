@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Decoder;
+namespace Endurance\Fit\Decoder;
 
-use Youmad\Endurance\Fit\Decoded\DecodedDataMessage;
-use Youmad\Endurance\Fit\Decoded\DecodedStandardField;
-use Youmad\Endurance\Fit\Profile\FieldProfile;
-use Youmad\Endurance\Fit\Profile\FitProfileRegistry;
-use Youmad\Endurance\Fit\Profile\SubfieldProfile;
-use Youmad\Endurance\Fit\Profiled\ProfiledDataMessage;
-use Youmad\Endurance\Fit\Profiled\ProfiledStandardField;
-use Youmad\Endurance\Fit\Profiled\ProfileNormalizationState;
-use Youmad\Endurance\Fit\Typed\TypedDataMessage;
+use Endurance\Fit\Decoded\DecodedDataMessage;
+use Endurance\Fit\Decoded\DecodedStandardField;
+use Endurance\Fit\Profile\FieldProfile;
+use Endurance\Fit\Profile\FitProfileRegistry;
+use Endurance\Fit\Profile\SubfieldProfile;
+use Endurance\Fit\Profiled\ProfiledDataMessage;
+use Endurance\Fit\Profiled\ProfiledStandardField;
+use Endurance\Fit\Profiled\ProfileNormalizationState;
+use Endurance\Fit\Typed\TypedDataMessage;
 
 final readonly class FitProfileNormalizer
 {

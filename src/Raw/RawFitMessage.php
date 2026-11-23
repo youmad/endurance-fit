@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Raw;
+namespace Endurance\Fit\Raw;
 
 interface RawFitMessage
 {

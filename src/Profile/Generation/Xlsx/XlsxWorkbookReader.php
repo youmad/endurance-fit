@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Profile\Generation\Xlsx;
+namespace Endurance\Fit\Profile\Generation\Xlsx;
 
-use Youmad\Endurance\Fit\Profile\Generation\ProfileGenerationException;
+use Endurance\Fit\Profile\Generation\ProfileGenerationException;
 
 final class XlsxWorkbookReader
 {

@@ -2,39 +2,39 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Tests\Decoder;
+namespace Endurance\Fit\Tests\Decoder;
 
+use Endurance\Fit\Decoder\FitComponentExtractor;
+use Endurance\Fit\Decoder\FitComponentTypeValueResolver;
+use Endurance\Fit\Decoder\FitComponentValueResolver;
+use Endurance\Fit\Decoder\FitDataMessageAssembler;
+use Endurance\Fit\Decoder\FitDataMessageDecoder;
+use Endurance\Fit\Decoder\FitProfileNormalizer;
+use Endurance\Fit\Decoder\FitTypeValueResolver;
+use Endurance\Fit\Profile\ComponentProfile;
+use Endurance\Fit\Profile\FieldProfile;
+use Endurance\Fit\Profile\FitTypeProfile;
+use Endurance\Fit\Profile\InMemoryFitProfileRegistry;
+use Endurance\Fit\Profile\InMemoryFitTypeRegistry;
+use Endurance\Fit\Profile\MessageProfile;
+use Endurance\Fit\Profile\TypeValueProfile;
+use Endurance\Fit\Profiled\ProfiledDataMessage;
+use Endurance\Fit\Raw\FitArchitecture;
+use Endurance\Fit\Raw\FitBaseType;
+use Endurance\Fit\Raw\MessageDefinition;
+use Endurance\Fit\Raw\RawDataMessage;
+use Endurance\Fit\Raw\RawFieldValue;
+use Endurance\Fit\Raw\RawStandardField;
+use Endurance\Fit\Raw\StandardFieldDefinition;
+use Endurance\Fit\Typed\TypedComponentDataMessage;
+use Endurance\Fit\Typed\TypedDataMessage;
+use Endurance\Fit\Typed\TypedEnumFieldElement;
+use Endurance\Fit\Typed\TypedFieldElements;
+use Endurance\Fit\Unified\ComponentFieldValue;
+use Endurance\Fit\Unified\FieldValueOrigin;
+use Endurance\Fit\Unified\PhysicalFieldValue;
+use Endurance\Fit\Unified\PreferPhysicalFieldValueSelectionPolicy;
 use PHPUnit\Framework\TestCase;
-use Youmad\Endurance\Fit\Decoder\FitComponentExtractor;
-use Youmad\Endurance\Fit\Decoder\FitComponentTypeValueResolver;
-use Youmad\Endurance\Fit\Decoder\FitComponentValueResolver;
-use Youmad\Endurance\Fit\Decoder\FitDataMessageAssembler;
-use Youmad\Endurance\Fit\Decoder\FitDataMessageDecoder;
-use Youmad\Endurance\Fit\Decoder\FitProfileNormalizer;
-use Youmad\Endurance\Fit\Decoder\FitTypeValueResolver;
-use Youmad\Endurance\Fit\Profile\ComponentProfile;
-use Youmad\Endurance\Fit\Profile\FieldProfile;
-use Youmad\Endurance\Fit\Profile\FitTypeProfile;
-use Youmad\Endurance\Fit\Profile\InMemoryFitProfileRegistry;
-use Youmad\Endurance\Fit\Profile\InMemoryFitTypeRegistry;
-use Youmad\Endurance\Fit\Profile\MessageProfile;
-use Youmad\Endurance\Fit\Profile\TypeValueProfile;
-use Youmad\Endurance\Fit\Profiled\ProfiledDataMessage;
-use Youmad\Endurance\Fit\Raw\FitArchitecture;
-use Youmad\Endurance\Fit\Raw\FitBaseType;
-use Youmad\Endurance\Fit\Raw\MessageDefinition;
-use Youmad\Endurance\Fit\Raw\RawDataMessage;
-use Youmad\Endurance\Fit\Raw\RawFieldValue;
-use Youmad\Endurance\Fit\Raw\RawStandardField;
-use Youmad\Endurance\Fit\Raw\StandardFieldDefinition;
-use Youmad\Endurance\Fit\Typed\TypedComponentDataMessage;
-use Youmad\Endurance\Fit\Typed\TypedDataMessage;
-use Youmad\Endurance\Fit\Typed\TypedEnumFieldElement;
-use Youmad\Endurance\Fit\Typed\TypedFieldElements;
-use Youmad\Endurance\Fit\Unified\ComponentFieldValue;
-use Youmad\Endurance\Fit\Unified\FieldValueOrigin;
-use Youmad\Endurance\Fit\Unified\PhysicalFieldValue;
-use Youmad\Endurance\Fit\Unified\PreferPhysicalFieldValueSelectionPolicy;
 
 final class FitDataMessageAssemblerTest extends TestCase
 {

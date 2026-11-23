@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Raw;
+namespace Endurance\Fit\Raw;
 
-use Youmad\Endurance\Fit\Exception\InvalidFitDefinition;
+use Endurance\Fit\Exception\InvalidFitDefinition;
 
 final readonly class FitBaseType
 {

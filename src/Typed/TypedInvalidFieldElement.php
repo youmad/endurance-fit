@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Typed;
+namespace Endurance\Fit\Typed;
 
-use Youmad\Endurance\Fit\Decoded\InvalidFieldElement;
+use Endurance\Fit\Decoded\InvalidFieldElement;
 
 final readonly class TypedInvalidFieldElement implements TypedFieldElement
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Decoded;
+namespace Endurance\Fit\Decoded;
 
 interface DecodedFieldElement
 {

@@ -1,5 +1,5 @@
 {
-  "name": "youmad/endurance-fit",
+  "name": "endurance/fit",
   "description": "Garmin FIT protocol implementation",
   "type": "library",
   "license": "MPL-2.0",
@@ -18,12 +18,12 @@
   ],
   "autoload": {
     "psr-4": {
-      "Youmad\\Endurance\\Fit\\": "src/"
+      "Endurance\\Fit\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Youmad\\Endurance\\Fit\\Tests\\": "tests/"
+      "Endurance\\Fit\\Tests\\": "tests/"
     }
   },
   "archive": {

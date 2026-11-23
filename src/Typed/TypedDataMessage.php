@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Typed;
+namespace Endurance\Fit\Typed;
 
-use Youmad\Endurance\Fit\Profiled\ProfiledDataMessage;
-use Youmad\Endurance\Fit\Raw\FitArchitecture;
-use Youmad\Endurance\Fit\Raw\RawDeveloperField;
+use Endurance\Fit\Profiled\ProfiledDataMessage;
+use Endurance\Fit\Raw\FitArchitecture;
+use Endurance\Fit\Raw\RawDeveloperField;
 
 final readonly class TypedDataMessage
 {

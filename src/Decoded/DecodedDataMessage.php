@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Decoded;
+namespace Endurance\Fit\Decoded;
 
-use Youmad\Endurance\Fit\Raw\FitArchitecture;
-use Youmad\Endurance\Fit\Raw\RawCompressedTimestampDataMessage;
-use Youmad\Endurance\Fit\Raw\RawDataRecord;
-use Youmad\Endurance\Fit\Raw\RawDeveloperField;
-use Youmad\Endurance\Fit\Raw\StandardFieldDefinition;
+use Endurance\Fit\Raw\FitArchitecture;
+use Endurance\Fit\Raw\RawCompressedTimestampDataMessage;
+use Endurance\Fit\Raw\RawDataRecord;
+use Endurance\Fit\Raw\RawDeveloperField;
+use Endurance\Fit\Raw\StandardFieldDefinition;
 
 final readonly class DecodedDataMessage
 {

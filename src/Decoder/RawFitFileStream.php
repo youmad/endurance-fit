@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Decoder;
+namespace Endurance\Fit\Decoder;
 
-use Youmad\Endurance\Fit\Checksum\FitCrc16;
-use Youmad\Endurance\Fit\Exception\FitDecodeException;
-use Youmad\Endurance\Fit\IO\FitInput;
-use Youmad\Endurance\Fit\Raw\FitFileHeader;
-use Youmad\Endurance\Fit\Raw\FitFileTrailer;
-use Youmad\Endurance\Fit\Raw\RawFitMessage;
+use Endurance\Fit\Checksum\FitCrc16;
+use Endurance\Fit\Exception\FitDecodeException;
+use Endurance\Fit\IO\FitInput;
+use Endurance\Fit\Raw\FitFileHeader;
+use Endurance\Fit\Raw\FitFileTrailer;
+use Endurance\Fit\Raw\RawFitMessage;
 
 final class RawFitFileStream
 {

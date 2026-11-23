@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Profile\Generation\Message;
+namespace Endurance\Fit\Profile\Generation\Message;
 
-use Youmad\Endurance\Fit\Profile\Generation\ProfileGenerationException;
+use Endurance\Fit\Profile\Generation\ProfileGenerationException;
 
 final readonly class GeneratedComponentDefinition
 {

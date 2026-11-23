@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Profile\Generation\Message;
+namespace Endurance\Fit\Profile\Generation\Message;
 
-use Youmad\Endurance\Fit\Profile\Generation\ProfileGenerationException;
-use Youmad\Endurance\Fit\Profile\Generation\ProfileIdentifierNormalizer;
-use Youmad\Endurance\Fit\Profile\Generation\Type\GeneratedTypes;
-use Youmad\Endurance\Fit\Profile\Generation\Xlsx\SpreadsheetRow;
+use Endurance\Fit\Profile\Generation\ProfileGenerationException;
+use Endurance\Fit\Profile\Generation\ProfileIdentifierNormalizer;
+use Endurance\Fit\Profile\Generation\Type\GeneratedTypes;
+use Endurance\Fit\Profile\Generation\Xlsx\SpreadsheetRow;
 
 final readonly class MessagesSheetParser
 {

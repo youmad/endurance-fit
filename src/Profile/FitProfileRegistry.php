@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Profile;
+namespace Endurance\Fit\Profile;
 
 interface FitProfileRegistry
 {

@@ -3,14 +3,14 @@
 
 declare(strict_types=1);
 
-use Youmad\Endurance\Fit\Profile\Generation\ProfileGenerationException;
-use Youmad\Endurance\Fit\Profile\Generation\Type\FitTypeProfileGenerator;
+use Endurance\Fit\Profile\Generation\ProfileGenerationException;
+use Endurance\Fit\Profile\Generation\Type\FitTypeProfileGenerator;
 
 $packageRoot = dirname(__DIR__, 3);
 
 spl_autoload_register(
     static function (string $class) use ($packageRoot): void {
-        $prefix = 'Youmad\\Endurance\\Fit\\';
+        $prefix = 'Endurance\\Fit\\';
 
         if (!str_starts_with($class, $prefix)) {
             return;

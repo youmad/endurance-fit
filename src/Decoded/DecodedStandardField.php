@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Decoded;
+namespace Endurance\Fit\Decoded;
 
-use Youmad\Endurance\Fit\Raw\FitBaseType;
-use Youmad\Endurance\Fit\Raw\RawStandardField;
-use Youmad\Endurance\Fit\Raw\StandardFieldDefinition;
+use Endurance\Fit\Raw\FitBaseType;
+use Endurance\Fit\Raw\RawStandardField;
+use Endurance\Fit\Raw\StandardFieldDefinition;
 
 final readonly class DecodedStandardField
 {

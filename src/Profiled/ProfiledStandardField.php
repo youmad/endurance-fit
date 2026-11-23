@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Profiled;
+namespace Endurance\Fit\Profiled;
 
-use Youmad\Endurance\Fit\Decoded\DecodedFieldValue;
-use Youmad\Endurance\Fit\Decoded\DecodedStandardField;
-use Youmad\Endurance\Fit\Profile\FieldProfile;
-use Youmad\Endurance\Fit\Profile\SubfieldProfile;
+use Endurance\Fit\Decoded\DecodedFieldValue;
+use Endurance\Fit\Decoded\DecodedStandardField;
+use Endurance\Fit\Profile\FieldProfile;
+use Endurance\Fit\Profile\SubfieldProfile;
 
 final readonly class ProfiledStandardField
 {

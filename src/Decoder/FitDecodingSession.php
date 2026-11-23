@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Decoder;
+namespace Endurance\Fit\Decoder;
 
-use Youmad\Endurance\Fit\Profile\FitProfileRegistry;
-use Youmad\Endurance\Fit\Profile\FitTypeRegistry;
+use Endurance\Fit\Profile\FitProfileRegistry;
+use Endurance\Fit\Profile\FitTypeRegistry;
 
 /**
  * One stream's pipeline and shared state. Never share across independent streams.

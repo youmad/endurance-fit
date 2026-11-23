@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Tests\Raw;
+namespace Endurance\Fit\Tests\Raw;
 
+use Endurance\Fit\Exception\InvalidRawFieldValue;
+use Endurance\Fit\Raw\RawFieldValue;
 use PHPUnit\Framework\TestCase;
-use Youmad\Endurance\Fit\Exception\InvalidRawFieldValue;
-use Youmad\Endurance\Fit\Raw\RawFieldValue;
 
 final class RawFieldValueTest extends TestCase
 {

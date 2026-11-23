@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Profile;
+namespace Endurance\Fit\Profile;
 
-use Youmad\Endurance\Fit\Exception\InvalidFitProfile;
+use Endurance\Fit\Exception\InvalidFitProfile;
 
 final readonly class FieldProfile
 {

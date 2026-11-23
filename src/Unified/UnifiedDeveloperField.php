@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Unified;
+namespace Endurance\Fit\Unified;
 
-use Youmad\Endurance\Fit\Decoded\DecodedFieldValue;
-use Youmad\Endurance\Fit\Developer\DeveloperDataProfile;
-use Youmad\Endurance\Fit\Developer\DeveloperFieldProfile;
-use Youmad\Endurance\Fit\Profile\FitTypeProfile;
-use Youmad\Endurance\Fit\Profiled\ProfileNormalizationState;
-use Youmad\Endurance\Fit\Raw\RawDeveloperField;
-use Youmad\Endurance\Fit\Typed\TypedFieldValue;
-use Youmad\Endurance\Fit\Typed\TypeResolutionState;
+use Endurance\Fit\Decoded\DecodedFieldValue;
+use Endurance\Fit\Developer\DeveloperDataProfile;
+use Endurance\Fit\Developer\DeveloperFieldProfile;
+use Endurance\Fit\Profile\FitTypeProfile;
+use Endurance\Fit\Profiled\ProfileNormalizationState;
+use Endurance\Fit\Raw\RawDeveloperField;
+use Endurance\Fit\Typed\TypedFieldValue;
+use Endurance\Fit\Typed\TypeResolutionState;
 
 final readonly class UnifiedDeveloperField
 {

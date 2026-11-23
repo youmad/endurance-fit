@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Typed;
+namespace Endurance\Fit\Typed;
 
-use Youmad\Endurance\Fit\Profile\FitTypeProfile;
-use Youmad\Endurance\Fit\Profiled\ProfiledStandardField;
+use Endurance\Fit\Profile\FitTypeProfile;
+use Endurance\Fit\Profiled\ProfiledStandardField;
 
 final readonly class TypedStandardField
 {

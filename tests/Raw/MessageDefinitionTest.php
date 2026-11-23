@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Tests\Raw;
+namespace Endurance\Fit\Tests\Raw;
 
+use Endurance\Fit\Exception\InvalidFitDefinition;
+use Endurance\Fit\Raw\DeveloperFieldDefinition;
+use Endurance\Fit\Raw\FitArchitecture;
+use Endurance\Fit\Raw\FitBaseType;
+use Endurance\Fit\Raw\MessageDefinition;
+use Endurance\Fit\Raw\StandardFieldDefinition;
 use PHPUnit\Framework\TestCase;
-use Youmad\Endurance\Fit\Exception\InvalidFitDefinition;
-use Youmad\Endurance\Fit\Raw\DeveloperFieldDefinition;
-use Youmad\Endurance\Fit\Raw\FitArchitecture;
-use Youmad\Endurance\Fit\Raw\FitBaseType;
-use Youmad\Endurance\Fit\Raw\MessageDefinition;
-use Youmad\Endurance\Fit\Raw\StandardFieldDefinition;
 
 final class MessageDefinitionTest extends TestCase
 {

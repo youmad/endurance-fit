@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Typed;
+namespace Endurance\Fit\Typed;
 
-use Youmad\Endurance\Fit\Decoded\ValidFieldElement;
-use Youmad\Endurance\Fit\Profile\TypeValueProfile;
+use Endurance\Fit\Decoded\ValidFieldElement;
+use Endurance\Fit\Profile\TypeValueProfile;
 
 final readonly class TypedEnumFieldElement implements TypedFieldElement
 {

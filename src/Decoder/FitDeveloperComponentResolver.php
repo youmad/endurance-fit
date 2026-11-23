@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Decoder;
+namespace Endurance\Fit\Decoder;
 
-use Youmad\Endurance\Fit\Decoded\DecodedFieldElements;
-use Youmad\Endurance\Fit\Decoded\ValidFieldElement;
-use Youmad\Endurance\Fit\Developer\DeveloperFieldProfile;
-use Youmad\Endurance\Fit\Exception\FitDecodeException;
-use Youmad\Endurance\Fit\Profiled\ProfileNormalizationState;
-use Youmad\Endurance\Fit\Raw\RawDeveloperField;
-use Youmad\Endurance\Fit\Typed\TypedDataMessage;
-use Youmad\Endurance\Fit\Unified\UnifiedDeveloperComponent;
+use Endurance\Fit\Decoded\DecodedFieldElements;
+use Endurance\Fit\Decoded\ValidFieldElement;
+use Endurance\Fit\Developer\DeveloperFieldProfile;
+use Endurance\Fit\Exception\FitDecodeException;
+use Endurance\Fit\Profiled\ProfileNormalizationState;
+use Endurance\Fit\Raw\RawDeveloperField;
+use Endurance\Fit\Typed\TypedDataMessage;
+use Endurance\Fit\Unified\UnifiedDeveloperComponent;
 
 final class FitDeveloperComponentResolver
 {

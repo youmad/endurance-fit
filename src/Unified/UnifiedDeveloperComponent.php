@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Unified;
+namespace Endurance\Fit\Unified;
 
-use Youmad\Endurance\Fit\Decoded\DecodedFieldValue;
-use Youmad\Endurance\Fit\Developer\DeveloperComponentProfile;
-use Youmad\Endurance\Fit\Developer\DeveloperFieldProfile;
-use Youmad\Endurance\Fit\Profiled\ProfileNormalizationState;
-use Youmad\Endurance\Fit\Raw\RawDeveloperField;
-use Youmad\Endurance\Fit\Typed\TypedFieldValue;
-use Youmad\Endurance\Fit\Typed\TypeResolutionState;
+use Endurance\Fit\Decoded\DecodedFieldValue;
+use Endurance\Fit\Developer\DeveloperComponentProfile;
+use Endurance\Fit\Developer\DeveloperFieldProfile;
+use Endurance\Fit\Profiled\ProfileNormalizationState;
+use Endurance\Fit\Raw\RawDeveloperField;
+use Endurance\Fit\Typed\TypedFieldValue;
+use Endurance\Fit\Typed\TypeResolutionState;
 
 final readonly class UnifiedDeveloperComponent
 {

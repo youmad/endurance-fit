@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Profile\Generation\Type;
+namespace Endurance\Fit\Profile\Generation\Type;
 
 final readonly class TypesPhpRenderer
 {

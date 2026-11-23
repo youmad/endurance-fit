@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Decoder;
+namespace Endurance\Fit\Decoder;
 
-use Youmad\Endurance\Fit\Exception\FitDecodeException;
-use Youmad\Endurance\Fit\IO\FitInput;
-use Youmad\Endurance\Fit\Raw\FitArchitecture;
+use Endurance\Fit\Exception\FitDecodeException;
+use Endurance\Fit\IO\FitInput;
+use Endurance\Fit\Raw\FitArchitecture;
 
 final readonly class BinaryReader
 {

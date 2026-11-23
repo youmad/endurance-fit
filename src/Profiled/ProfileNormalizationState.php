@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Profiled;
+namespace Endurance\Fit\Profiled;
 
 enum ProfileNormalizationState: string
 {

@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Decoder;
+namespace Endurance\Fit\Decoder;
 
-use Youmad\Endurance\Fit\Developer\FitDeveloperProfileCollector;
-use Youmad\Endurance\Fit\Developer\FitDeveloperProfileRegistry;
-use Youmad\Endurance\Fit\Profile\FitProfileRegistry;
-use Youmad\Endurance\Fit\Profiled\ProfiledDataMessage;
-use Youmad\Endurance\Fit\Profiled\ProfileNormalizationState;
-use Youmad\Endurance\Fit\Typed\TypedDataMessage;
-use Youmad\Endurance\Fit\Unified\UnifiedDeveloperField;
+use Endurance\Fit\Developer\FitDeveloperProfileCollector;
+use Endurance\Fit\Developer\FitDeveloperProfileRegistry;
+use Endurance\Fit\Profile\FitProfileRegistry;
+use Endurance\Fit\Profiled\ProfiledDataMessage;
+use Endurance\Fit\Profiled\ProfileNormalizationState;
+use Endurance\Fit\Typed\TypedDataMessage;
+use Endurance\Fit\Unified\UnifiedDeveloperField;
 
 final class FitDeveloperFieldResolver
 {

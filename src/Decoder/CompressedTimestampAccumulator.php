@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Decoder;
+namespace Endurance\Fit\Decoder;
 
-use Youmad\Endurance\Fit\Exception\FitDecodeException;
-use Youmad\Endurance\Fit\Raw\FitArchitecture;
-use Youmad\Endurance\Fit\Raw\RawDataRecord;
+use Endurance\Fit\Exception\FitDecodeException;
+use Endurance\Fit\Raw\FitArchitecture;
+use Endurance\Fit\Raw\RawDataRecord;
 
 final class CompressedTimestampAccumulator
 {

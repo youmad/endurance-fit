@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Decoded;
+namespace Endurance\Fit\Decoded;
 
-use Youmad\Endurance\Fit\Raw\FitBaseType;
-use Youmad\Endurance\Fit\Raw\RawFieldValue;
+use Endurance\Fit\Raw\FitBaseType;
+use Endurance\Fit\Raw\RawFieldValue;
 
 final readonly class UndecodableFieldValue implements DecodedFieldValue
 {

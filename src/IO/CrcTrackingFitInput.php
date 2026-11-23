@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\IO;
+namespace Endurance\Fit\IO;
 
-use Youmad\Endurance\Fit\Checksum\FitCrc16;
+use Endurance\Fit\Checksum\FitCrc16;
 
 final readonly class CrcTrackingFitInput implements FitInput
 {

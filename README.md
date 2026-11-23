@@ -1,4 +1,4 @@
-# youmad/endurance-fit
+# endurance/fit
 
 Streaming FIT decoding with explicitly supplied message and type profiles.
 
@@ -18,7 +18,7 @@ and GPX export belong to other packages.
 ## Installation
 
 ```bash
-composer require youmad/endurance-fit
+composer require endurance/fit
 ```
 
 A 64-bit PHP build is required. Generating registries from an XLSX workbook
@@ -82,9 +82,9 @@ declare(strict_types=1);
 
 require __DIR__ . '/vendor/autoload.php';
 
-use Youmad\Endurance\Fit\Decoder\FitDecoder;
-use Youmad\Endurance\Fit\IO\ResourceFitInput;
-use Youmad\Endurance\Fit\Profile\Generated\GeneratedFitProfileSet;
+use Endurance\Fit\Decoder\FitDecoder;
+use Endurance\Fit\IO\ResourceFitInput;
+use Endurance\Fit\Profile\Generated\GeneratedFitProfileSet;
 
 $profile = GeneratedFitProfileSet::load(
     messagesFile: __DIR__ . '/var/fit-profile/messages.php',

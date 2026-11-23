@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Raw;
+namespace Endurance\Fit\Raw;
 
-use Youmad\Endurance\Fit\Exception\InvalidRawFitMessage;
+use Endurance\Fit\Exception\InvalidRawFitMessage;
 
 final readonly class RawDataPayload
 {

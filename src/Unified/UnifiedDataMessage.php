@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Unified;
+namespace Endurance\Fit\Unified;
 
-use Youmad\Endurance\Fit\Typed\TypedComponentDataMessage;
-use Youmad\Endurance\Fit\Typed\TypedDataMessage;
+use Endurance\Fit\Typed\TypedComponentDataMessage;
+use Endurance\Fit\Typed\TypedDataMessage;
 
 final readonly class UnifiedDataMessage
 {

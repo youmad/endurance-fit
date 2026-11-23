@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Tests\Profile\Generation\Message;
+namespace Endurance\Fit\Tests\Profile\Generation\Message;
 
+use Endurance\Fit\Profile\Generation\Message\GeneratedComponentDefinition;
+use Endurance\Fit\Profile\Generation\Message\GeneratedMessageDefinition;
+use Endurance\Fit\Profile\Generation\Message\GeneratedMessageFieldDefinition;
+use Endurance\Fit\Profile\Generation\Message\GeneratedMessages;
+use Endurance\Fit\Profile\Generation\Message\GeneratedSubfieldConditionDefinition;
+use Endurance\Fit\Profile\Generation\Message\GeneratedSubfieldDefinition;
+use Endurance\Fit\Profile\Generation\Message\MessagesPhpRenderer;
 use PHPUnit\Framework\TestCase;
-use Youmad\Endurance\Fit\Profile\Generation\Message\GeneratedComponentDefinition;
-use Youmad\Endurance\Fit\Profile\Generation\Message\GeneratedMessageDefinition;
-use Youmad\Endurance\Fit\Profile\Generation\Message\GeneratedMessageFieldDefinition;
-use Youmad\Endurance\Fit\Profile\Generation\Message\GeneratedMessages;
-use Youmad\Endurance\Fit\Profile\Generation\Message\GeneratedSubfieldConditionDefinition;
-use Youmad\Endurance\Fit\Profile\Generation\Message\GeneratedSubfieldDefinition;
-use Youmad\Endurance\Fit\Profile\Generation\Message\MessagesPhpRenderer;
 
 final class MessagesPhpRendererTest extends TestCase
 {

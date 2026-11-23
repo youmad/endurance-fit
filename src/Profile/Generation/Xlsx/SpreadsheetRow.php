@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Profile\Generation\Xlsx;
+namespace Endurance\Fit\Profile\Generation\Xlsx;
 
 final readonly class SpreadsheetRow
 {

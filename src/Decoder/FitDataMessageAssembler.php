@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Decoder;
+namespace Endurance\Fit\Decoder;
 
-use Youmad\Endurance\Fit\Typed\TypedComponentDataMessage;
-use Youmad\Endurance\Fit\Typed\TypedDataMessage;
-use Youmad\Endurance\Fit\Unified\ComponentFieldValue;
-use Youmad\Endurance\Fit\Unified\PhysicalFieldValue;
-use Youmad\Endurance\Fit\Unified\UnifiedDataMessage;
-use Youmad\Endurance\Fit\Unified\UnifiedDeveloperField;
-use Youmad\Endurance\Fit\Unified\UnifiedStandardField;
+use Endurance\Fit\Typed\TypedComponentDataMessage;
+use Endurance\Fit\Typed\TypedDataMessage;
+use Endurance\Fit\Unified\ComponentFieldValue;
+use Endurance\Fit\Unified\PhysicalFieldValue;
+use Endurance\Fit\Unified\UnifiedDataMessage;
+use Endurance\Fit\Unified\UnifiedDeveloperField;
+use Endurance\Fit\Unified\UnifiedStandardField;
 
 final readonly class FitDataMessageAssembler
 {

@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Tests\Decoder;
+namespace Endurance\Fit\Tests\Decoder;
 
+use Endurance\Fit\Decoder\RawRecordStreamReader;
+use Endurance\Fit\Exception\FitDecodeException;
+use Endurance\Fit\IO\ResourceFitInput;
+use Endurance\Fit\Raw\FitArchitecture;
+use Endurance\Fit\Raw\RawCompressedTimestampDataMessage;
+use Endurance\Fit\Raw\RawDataMessage;
+use Endurance\Fit\Raw\RawDataRecord;
+use Endurance\Fit\Raw\RawDefinitionMessage;
+use Endurance\Fit\Raw\RawFitMessage;
 use PHPUnit\Framework\TestCase;
-use Youmad\Endurance\Fit\Decoder\RawRecordStreamReader;
-use Youmad\Endurance\Fit\Exception\FitDecodeException;
-use Youmad\Endurance\Fit\IO\ResourceFitInput;
-use Youmad\Endurance\Fit\Raw\FitArchitecture;
-use Youmad\Endurance\Fit\Raw\RawCompressedTimestampDataMessage;
-use Youmad\Endurance\Fit\Raw\RawDataMessage;
-use Youmad\Endurance\Fit\Raw\RawDataRecord;
-use Youmad\Endurance\Fit\Raw\RawDefinitionMessage;
-use Youmad\Endurance\Fit\Raw\RawFitMessage;
 
 final class RawRecordStreamReaderTest extends TestCase
 {

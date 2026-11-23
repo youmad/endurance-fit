@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Typed;
+namespace Endurance\Fit\Typed;
 
-use Youmad\Endurance\Fit\Decoded\ValidFieldElement;
+use Endurance\Fit\Decoded\ValidFieldElement;
 
 final readonly class TypedScalarFieldElement implements TypedFieldElement
 {

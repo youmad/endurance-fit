@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Tests\Checksum;
+namespace Endurance\Fit\Tests\Checksum;
 
+use Endurance\Fit\Checksum\FitCrc16;
 use PHPUnit\Framework\TestCase;
-use Youmad\Endurance\Fit\Checksum\FitCrc16;
 
 final class FitCrc16Test extends TestCase
 {

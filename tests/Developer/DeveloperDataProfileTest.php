@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Tests\Developer;
+namespace Endurance\Fit\Tests\Developer;
 
+use Endurance\Fit\Developer\DeveloperDataProfile;
+use Endurance\Fit\Exception\InvalidFitProfile;
 use PHPUnit\Framework\TestCase;
-use Youmad\Endurance\Fit\Developer\DeveloperDataProfile;
-use Youmad\Endurance\Fit\Exception\InvalidFitProfile;
 
 final class DeveloperDataProfileTest extends TestCase
 {

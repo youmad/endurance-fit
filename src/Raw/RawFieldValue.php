@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Raw;
+namespace Endurance\Fit\Raw;
 
-use Youmad\Endurance\Fit\Exception\InvalidRawFieldValue;
+use Endurance\Fit\Exception\InvalidRawFieldValue;
 
 final readonly class RawFieldValue
 {

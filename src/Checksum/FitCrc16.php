@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Checksum;
+namespace Endurance\Fit\Checksum;
 
 /**
  * CRC-16/ARC with zero initial remainder and zero final XOR.

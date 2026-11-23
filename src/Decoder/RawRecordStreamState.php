@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Decoder;
+namespace Endurance\Fit\Decoder;
 
-use Youmad\Endurance\Fit\Raw\MessageDefinition;
+use Endurance\Fit\Raw\MessageDefinition;
 
 /** State shared by the member files of one chained FIT input. */
 final class RawRecordStreamState

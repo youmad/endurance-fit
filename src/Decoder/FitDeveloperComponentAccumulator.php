@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Decoder;
+namespace Endurance\Fit\Decoder;
 
-use Youmad\Endurance\Fit\Exception\FitDecodeException;
+use Endurance\Fit\Exception\FitDecodeException;
 
 final class FitDeveloperComponentAccumulator
 {

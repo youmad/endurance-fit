@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Tests\Decoder;
+namespace Endurance\Fit\Tests\Decoder;
 
+use Endurance\Fit\Decoder\FitDeveloperComponentAccumulator;
 use PHPUnit\Framework\TestCase;
-use Youmad\Endurance\Fit\Decoder\FitDeveloperComponentAccumulator;
 
 final class FitDeveloperComponentAccumulatorTest extends TestCase
 {

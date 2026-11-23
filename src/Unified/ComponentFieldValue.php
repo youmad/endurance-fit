@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Unified;
+namespace Endurance\Fit\Unified;
 
-use Youmad\Endurance\Fit\Typed\TypedComponentField;
+use Endurance\Fit\Typed\TypedComponentField;
 
 final readonly class ComponentFieldValue implements UnifiedFieldValue
 {

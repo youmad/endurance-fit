@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Decoder;
+namespace Endurance\Fit\Decoder;
 
-use Youmad\Endurance\Fit\Profile\FitTypeRegistry;
-use Youmad\Endurance\Fit\Profiled\ProfiledDataMessage;
-use Youmad\Endurance\Fit\Profiled\ProfiledStandardField;
-use Youmad\Endurance\Fit\Typed\TypedDataMessage;
-use Youmad\Endurance\Fit\Typed\TypedStandardField;
+use Endurance\Fit\Profile\FitTypeRegistry;
+use Endurance\Fit\Profiled\ProfiledDataMessage;
+use Endurance\Fit\Profiled\ProfiledStandardField;
+use Endurance\Fit\Typed\TypedDataMessage;
+use Endurance\Fit\Typed\TypedStandardField;
 
 final readonly class FitTypeValueResolver
 {

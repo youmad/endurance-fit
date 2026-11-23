@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Tests\Profile\Generated;
+namespace Endurance\Fit\Tests\Profile\Generated;
 
+use Endurance\Fit\Exception\InvalidFitProfile;
+use Endurance\Fit\Profile\Generated\GeneratedFitProfileSet;
 use PHPUnit\Framework\TestCase;
-use Youmad\Endurance\Fit\Exception\InvalidFitProfile;
-use Youmad\Endurance\Fit\Profile\Generated\GeneratedFitProfileSet;
 
 final class GeneratedFitProfileSetTest extends TestCase
 {

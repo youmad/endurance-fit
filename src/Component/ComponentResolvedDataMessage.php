@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Component;
+namespace Endurance\Fit\Component;
 
 final readonly class ComponentResolvedDataMessage
 {

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Decoder;
+namespace Endurance\Fit\Decoder;
 
-use Youmad\Endurance\Fit\Component\ComponentResolvedDataMessage;
-use Youmad\Endurance\Fit\Component\ResolvedComponentField;
-use Youmad\Endurance\Fit\Profile\FitTypeRegistry;
-use Youmad\Endurance\Fit\Typed\TypedComponentDataMessage;
-use Youmad\Endurance\Fit\Typed\TypedComponentField;
-use Youmad\Endurance\Fit\Typed\TypeResolutionState;
+use Endurance\Fit\Component\ComponentResolvedDataMessage;
+use Endurance\Fit\Component\ResolvedComponentField;
+use Endurance\Fit\Profile\FitTypeRegistry;
+use Endurance\Fit\Typed\TypedComponentDataMessage;
+use Endurance\Fit\Typed\TypedComponentField;
+use Endurance\Fit\Typed\TypeResolutionState;
 
 final readonly class FitComponentTypeValueResolver
 {

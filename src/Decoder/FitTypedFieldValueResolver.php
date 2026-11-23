@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Decoder;
+namespace Endurance\Fit\Decoder;
 
-use Youmad\Endurance\Fit\Decoded\DecodedFieldElements;
-use Youmad\Endurance\Fit\Decoded\DecodedFieldValue;
-use Youmad\Endurance\Fit\Decoded\InvalidFieldElement;
-use Youmad\Endurance\Fit\Decoded\ValidFieldElement;
-use Youmad\Endurance\Fit\Profile\FitTypeProfile;
-use Youmad\Endurance\Fit\Typed\ResolvedTypedFieldValue;
-use Youmad\Endurance\Fit\Typed\TypedEnumFieldElement;
-use Youmad\Endurance\Fit\Typed\TypedFieldElements;
-use Youmad\Endurance\Fit\Typed\TypedInvalidFieldElement;
-use Youmad\Endurance\Fit\Typed\TypedScalarFieldElement;
-use Youmad\Endurance\Fit\Typed\TypeResolutionState;
-use Youmad\Endurance\Fit\Typed\UnavailableTypedFieldValue;
+use Endurance\Fit\Decoded\DecodedFieldElements;
+use Endurance\Fit\Decoded\DecodedFieldValue;
+use Endurance\Fit\Decoded\InvalidFieldElement;
+use Endurance\Fit\Decoded\ValidFieldElement;
+use Endurance\Fit\Profile\FitTypeProfile;
+use Endurance\Fit\Typed\ResolvedTypedFieldValue;
+use Endurance\Fit\Typed\TypedEnumFieldElement;
+use Endurance\Fit\Typed\TypedFieldElements;
+use Endurance\Fit\Typed\TypedInvalidFieldElement;
+use Endurance\Fit\Typed\TypedScalarFieldElement;
+use Endurance\Fit\Typed\TypeResolutionState;
+use Endurance\Fit\Typed\UnavailableTypedFieldValue;
 
 final readonly class FitTypedFieldValueResolver
 {

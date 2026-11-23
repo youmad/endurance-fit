@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\Fit\Tests\Raw;
+namespace Endurance\Fit\Tests\Raw;
 
+use Endurance\Fit\Exception\InvalidRawFitMessage;
+use Endurance\Fit\Raw\DeveloperFieldDefinition;
+use Endurance\Fit\Raw\FitArchitecture;
+use Endurance\Fit\Raw\FitBaseType;
+use Endurance\Fit\Raw\MessageDefinition;
+use Endurance\Fit\Raw\RawDataMessage;
+use Endurance\Fit\Raw\RawDefinitionMessage;
+use Endurance\Fit\Raw\RawDeveloperField;
+use Endurance\Fit\Raw\RawFieldValue;
+use Endurance\Fit\Raw\RawFitMessage;
+use Endurance\Fit\Raw\RawStandardField;
+use Endurance\Fit\Raw\StandardFieldDefinition;
 use PHPUnit\Framework\TestCase;
-use Youmad\Endurance\Fit\Exception\InvalidRawFitMessage;
-use Youmad\Endurance\Fit\Raw\DeveloperFieldDefinition;
-use Youmad\Endurance\Fit\Raw\FitArchitecture;
-use Youmad\Endurance\Fit\Raw\FitBaseType;
-use Youmad\Endurance\Fit\Raw\MessageDefinition;
-use Youmad\Endurance\Fit\Raw\RawDataMessage;
-use Youmad\Endurance\Fit\Raw\RawDefinitionMessage;
-use Youmad\Endurance\Fit\Raw\RawDeveloperField;
-use Youmad\Endurance\Fit\Raw\RawFieldValue;
-use Youmad\Endurance\Fit\Raw\RawFitMessage;
-use Youmad\Endurance\Fit\Raw\RawStandardField;
-use Youmad\Endurance\Fit\Raw\StandardFieldDefinition;
 
 final class RawMessageTest extends TestCase
 {
